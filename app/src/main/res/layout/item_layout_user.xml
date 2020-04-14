@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
+    <TextView
+        android:id="@+id/textviewName"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/imageview"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:text="Tên Món Ăn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_below="@id/textviewName"
+        android:id="@+id/textviewMota"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/imageview"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:text="Mô tả"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/textviewGia"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:text="Giá tiền"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
