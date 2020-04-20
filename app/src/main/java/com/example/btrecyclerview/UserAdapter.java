@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHoder> {
     private ArrayList<User> mArrayUsers;
 
-    public UserAdapter(){
-        mArrayUsers = new ArrayList<>();
+    public UserAdapter(){ mArrayUsers = new ArrayList<>();
     }
+
     public void submitData (ArrayList<User> arrayUsers){
         if (arrayUsers!= null){
             mArrayUsers.clear();
@@ -45,8 +45,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHoder>
         User user = mArrayUsers.get(position);
        holder.mImage.setImageResource(user.getImage());
        holder.mTviewName.setText(user.getName());
-       holder.mTviewMota.setText(String.valueOf(user.getMota()));
+       holder.mTviewMota.setText(user.getMota());
        holder.mTviewGia.setText(String.valueOf(user.getGia()));
+       holder.mTviewDonvi.setText(user.getDonvitien());
 
 
     }
@@ -59,13 +60,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemViewHoder>
 
     class ItemViewHoder extends RecyclerView.ViewHolder{
         ImageView mImage;
-        TextView mTviewName,mTviewGia,mTviewMota;
+        TextView mTviewName,mTviewGia,mTviewMota,mTviewDonvi;
 
         public ItemViewHoder(@NonNull View itemView) {
             super(itemView);
+            mImage = itemView.findViewById(R.id.imageview);
             mTviewName = itemView.findViewById(R.id.textviewName);
             mTviewGia = itemView.findViewById(R.id.textviewGia);
             mTviewMota = itemView.findViewById(R.id.textviewMota);
+            mTviewDonvi = itemView.findViewById(R.id.donvitien);
         }
         public void bind(int position){
 

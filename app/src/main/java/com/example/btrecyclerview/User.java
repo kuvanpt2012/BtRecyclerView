@@ -5,12 +5,20 @@ public class User {
     private String mota;
     private int image;
     private int gia;
+    private String donvi;
 
-    public User(String name, String mota, int image, int gia) {
+
+
+
+    public User(String name, String mota, int image, int gia, String donvi) {
         this.name = name;
         this.mota = mota;
         this.image = image;
         this.gia = gia;
+        this.donvi = donvi;
+
+
+
     }
 
     public String getName() {
@@ -43,6 +51,15 @@ public class User {
 
     public void setGia(int gia) {
         this.gia = gia;
+
+    }
+
+    public String getDonvitien() {
+        return donvi;
+    }
+
+    public void setDonvitien(String donvitien) {
+        this.donvi = donvitien;
     }
 }
 
